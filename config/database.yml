@@ -1,0 +1,19 @@
+login: &login
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: 127.0.0.1
+  username:
+  password:
+
+development:
+  <<: *login
+  database: apod_development
+
+test:
+  <<: *login
+  database: apod_test
+
+production:
+  <<: *login
+  database: apod_production
