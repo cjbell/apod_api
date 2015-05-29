@@ -10,4 +10,5 @@ class Post < ActiveRecord::Base
 
   scope :posted, ->{ order('published_at ASC') }
   scope :latest, ->{ order('published_at DESC') }
+  scope :images, -> { where(video_embed_url: nil) }
 end

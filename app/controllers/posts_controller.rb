@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @collection = Post.latest.page(params[:page])
+    @collection = Post.latest.images.page(params[:page])
 
     render json: @collection
   end
